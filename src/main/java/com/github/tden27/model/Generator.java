@@ -14,7 +14,7 @@ public class Generator{
     private static List<String> memberNames;
     private static int callMethodCounter = 0;
 
-    public static void generateNextPersonInFullList(Map<Integer, String> personList) throws ArrayIndexOutOfBoundsException {
+    public static void generateNextPersonInFullList(Map<Integer, String> personList) {
         memberNames = new ArrayList<>(personList.values());
         if(callMethodCounter == 0 || callMethodCounter == personList.size()){
             generateFirstPerson();
