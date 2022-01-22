@@ -1,4 +1,4 @@
-package com.github.tden27;
+package com.github.tden27.model;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -37,7 +37,6 @@ public class ParserExcel {
             System.out.println("Файл не найден. Попробуйте еще.");
             readFromExcel();
             return map;
-
         }
         XSSFSheet sheet = workBook.getSheetAt(0);
 
@@ -56,6 +55,10 @@ public class ParserExcel {
             System.out.println("Невозможно прочитать таблицу. Неверный формат ячеек таблицы.");
             readFromExcel();
         }
+        return map;
+    }
+
+    public static Map<Integer, String> getMap() {
         return map;
     }
 }
