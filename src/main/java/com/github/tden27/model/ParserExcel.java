@@ -30,7 +30,7 @@ public class ParserExcel {
     public static Map<Integer, String> readFromExcel() {
         String fileName = scanFileName();
 
-        XSSFWorkbook workBook = null;
+        XSSFWorkbook workBook;
         try {
             workBook = new XSSFWorkbook(new FileInputStream(fileName));
         } catch (IOException e) {
