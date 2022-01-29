@@ -1,12 +1,5 @@
 package com.github.tden27.model;
-
-import jdk.nashorn.internal.objects.NativeMath;
-
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static jdk.nashorn.internal.runtime.ScriptObject.toPropertyDescriptor;
 
 public class Generator{
     private static String headPerson;
@@ -30,7 +23,6 @@ public class Generator{
         }
         System.out.format("%s, ask %s", headPerson, askedPerson);
         System.out.println();
-
     }
 
     private static void generateFirstPerson() {
