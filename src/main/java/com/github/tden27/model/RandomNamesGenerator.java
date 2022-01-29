@@ -25,14 +25,14 @@ public class RandomNamesGenerator {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Нажмите Enter для генерации или Х для выхода");
+        System.out.print("Нажмите Enter для генерации или Х для выхода");
         while (!scanner.nextLine().equalsIgnoreCase("x")) {
             if (answeredPersonKeys.size() == mapExcel.size()) {
-                System.out.println(mapExcel.get(keyOfLastAnsweredPerson) + " ask " + mapExcel.get(keyOfFirstPerson));
+                System.out.print(mapExcel.get(keyOfLastAnsweredPerson) + " ask " + mapExcel.get(keyOfFirstPerson));
+                scanner.nextLine();
                 System.out.println("Все учащиеся сгенерированы");
                 break;
             }
-            System.out.println("Нажмите Enter для продолжения или Х для выхода");
             if(keyOfFirstPerson == null){
                 keyOfFirstPerson = random();
                 keyOfLastAnsweredPerson = random();
@@ -42,6 +42,7 @@ public class RandomNamesGenerator {
                 System.out.println(mapExcel.get(keyOfLastAnsweredPerson) + " ask " + mapExcel.get(tmpKey));
                 keyOfLastAnsweredPerson = tmpKey;
             }
+            System.out.print("Нажмите Enter для продолжения или Х для выхода");
         }
 
     }
